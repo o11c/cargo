@@ -1,0 +1,53 @@
+[project]
+name = "cargo"
+version = "0.0.0"
+authors = ["Ben Longbons <b.r.longbons@gmail.com>"]
+
+[[lib]]
+name = "cargo"
+path = "src/cargo/lib.rs"
+test = true # unit tests
+
+[[bin]]
+name = "cargo-build"
+test = false
+
+[[bin]]
+name = "cargo-clean"
+test = false
+
+[[bin]]
+name = "cargo-git-checkout"
+test = false
+
+[[bin]]
+name = "cargo-read-manifest"
+test = false
+
+[[bin]]
+name = "cargo-rustc"
+test = false
+
+[[bin]]
+name = "cargo-test"
+test = false
+
+[[bin]]
+name = "cargo-verify-project"
+test = false
+
+[[bin]]
+name = "cargo"
+test = false
+
+[[test]]
+name = "integration"
+path = "tests/tests.rs"
+
+
+[dependencies.hammer]
+git = "https://github.com/wycats/hammer.rs.git"
+[dependencies.hamcrest]
+git = "https://github.com/carllerche/hamcrest-rust/"
+[dependencies.toml]
+git = "https://github.com/alexcrichton/toml-rs"
